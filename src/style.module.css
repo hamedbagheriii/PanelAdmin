@@ -1,0 +1,144 @@
+
+body{
+    background:linear-gradient(40deg , rgb(5, 140, 186),rgb(255, 255, 255)) ,  url('./assets/images/body_back7.jpg');
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+td , th {
+    text-align: center !important;
+}
+
+.sidebar_section{
+    position: fixed;
+    width: 250px;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    display: block;
+    transition: all 300ms ease;
+    z-index: 999;
+    border-left: 2px solid rgb(255, 255, 255); 
+    background: linear-gradient(-20deg , rgb(76, 76, 75),rgb(0, 0, 0));
+    color: white;
+    border-radius: 20px 0 0 20px;
+}
+
+.sidebar_avatar{
+    margin-top: 2rem;
+    text-align: center;
+    padding: 0.3rem 0.5rem 2.3rem !important;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.sidebar_avatar img{
+    max-width: 75px;
+    border-radius: 50%;
+}
+
+.sidebar_list li a:hover{
+    color: rgb(255, 200, 0);
+}   
+.sidebar_list li{
+    padding: 1.5rem 1.5rem;
+    font-size: 20px;
+    transition: all 300ms ease;
+}
+.sidebar_list li:not(.sidebar_avatar):hover{
+    padding: .8rem 1.5rem;
+    background: #ebe6e681;
+}
+
+
+
+/* content section  */
+.content_section{
+    position: fixed;
+    width: calc(100% - 250px);
+    left: 0;
+    top: 0;
+    height: 100vh;
+    overflow: auto;
+    color: rgb(0, 0, 0) !important;
+}
+
+.menu_button{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    z-index: 1000;
+    display: none;
+}
+
+@media(max-width:768px){
+    .content_section{
+        width: 100%;
+    }
+    .sidebar_section{
+        right: -250px;
+    }
+    .sidebar_section.active{
+        right: 0;
+    }
+    .menu_button{
+        display: flex;
+    }
+}
+
+
+/* users content ----------- */
+.userForm{
+    width: 90% !important;
+    max-width: 700px;
+    height: fit-content;
+    border-radius: 15px;
+}
+
+.userForm_title{
+    width: 40% !important; 
+    border-radius: 9px;
+}
+
+.inputUser::placeholder{
+    font-size: 14px;
+}
+
+/* ......... */
+
+
+
+/* active sidebar */
+.active_nav li {
+    background-color: #ffffff6b !important;
+}
+
+/* tabel style */
+.table_scroll{
+    background-color: transparent !important;
+    overflow: auto !important;
+}
+
+.table_scroll::-webkit-scrollbar{
+    border-radius: 20px;
+    height: 10px;
+    color: #000;
+    position: absolute;
+}
+.table_scroll::-webkit-scrollbar-button{
+    display: none;
+}
+.table_scroll::-webkit-scrollbar-thumb{
+    background: #018dff; 
+    border-radius: 20px;
+}
+.table_scroll::-webkit-scrollbar-track{
+    background: #ffffff; 
+    border-radius: 22px;
+}
